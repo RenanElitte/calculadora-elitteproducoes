@@ -40,41 +40,97 @@ input{font-family:inherit;-webkit-tap-highlight-color:transparent}
    HEADER
 ═══════════════════════════════════════════════ */
 header{
-  position:sticky;top:0;z-index:100;
+  position:sticky;
+  top:0;
+  z-index:100;
   background:rgba(0,0,0,.97);
   border-bottom:1px solid var(--gb);
-  height:58px;padding:0 20px;
-  display:flex;align-items:center;justify-content:space-between;
-  /* safe area for notched phones */
-  padding-left:max(20px,env(safe-area-inset-left));
-  padding-right:max(20px,env(safe-area-inset-right));
-}
-.logo-svg{height:34px;width:auto;display:block}
-.badge{
-  font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--gold);border:1px solid var(--gb2);border-radius:3px;padding:3px 9px;
-}
-@media(max-width:400px){.badge{display:none}}
+  height:70px;
+  padding:0 20px;
 
+  display:flex;
+  align-items:center;
+  justify-content:center; /* CENTRALIZA TUDO */
+
+  padding-left:max(20px, env(safe-area-inset-left));
+  padding-right:max(20px, env(safe-area-inset-right));
+}
+
+/* LOGO HEADER */
+header img{
+  height:40px;
+  width:auto;
+  display:block;
+}
+
+/* TEXTO AO LADO (se quiser manter) */
+.badge{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.16em;
+  color:var(--gold);
+  border:1px solid var(--gb2);
+  border-radius:999px;
+  padding:4px 8px;
+  margin-left:10px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .badge{
+    display:none;
+  }
+}
 /* ═══════════════════════════════════════════════
    HERO
 ═══════════════════════════════════════════════ */
 .hero{
-  max-width:860px;margin:0 auto;
+  max-width:860px;
+  margin:0 auto;
   padding:28px 20px 0;
-  padding-left:max(20px,env(safe-area-inset-left));
-  padding-right:max(20px,env(safe-area-inset-right));
+  padding-left:max(20px, env(safe-area-inset-left));
+  padding-right:max(20px, env(safe-area-inset-right));
+  text-align:center;
 }
-.hero-bg{
-  font-size:clamp(52px,12vw,84px);font-weight:700;
-  color:transparent;color:var(--gold);
-  opacity:.3;letter-spacing:-4px;line-height:1;
-  margin-bottom:-6px;user-select:none;pointer-events:none;
-}
-.hero-title{font-size:clamp(1.45rem,4.5vw,2.2rem);font-weight:300;color:var(--cream);line-height:1.18;margin-bottom:6px}
-.hero-title b{font-weight:700;color:var(--gold)}
-.hero-sub{font-size:11px;color:var(--t2);letter-spacing:.09em;text-transform:uppercase;margin-bottom:28px}
 
+.hero-bg{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0 auto 14px auto;
+  opacity:1;
+  user-select:none;
+  pointer-events:none;
+}
+
+.hero-bg img{
+  width:120px;
+  max-width:100%;
+  height:auto;
+}
+
+.hero-title{
+  font-size:clamp(30px,5vw,48px);
+  font-weight:700;
+  text-align:center;
+  color:var(--cream);
+  line-height:1.1;
+  margin:0 0 6px 0;
+}
+
+.hero-title b{
+  font-weight:700;
+  color:var(--gold);
+}
+
+.hero-sub{
+  font-size:11px;
+  color:var(--t2);
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  text-align:center;
+  margin:0 auto 18px auto;
+}
 /* ═══════════════════════════════════════════════
    MAIN
 ═══════════════════════════════════════════════ */
@@ -357,7 +413,7 @@ footer p{font-size:10px;color:var(--t3);letter-spacing:.05em}
 
 <!-- ════════════════════ HEADER ════════════════════ -->
 <header>
-  <img src="logoelitte.png" style="width:110px;">
+  <img src="logoelitte.png" style="width:120px;">
   <span class="badge">Calculadora de Elitte</span>
 </header>
 
